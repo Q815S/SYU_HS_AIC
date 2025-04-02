@@ -12,13 +12,14 @@ SYU_HS = os.getenv('SYU_HS')
 NEW = os.getenv('NEW')
 SSK = os.getenv('SSK')
 BLUE = os.getenv('BLUE')
+RED = os.getenv('RED')
 INJ = os.getenv('INJ')
 End = os.getenv('END')
 
 genai.configure(api_key=GOOGLE_API_KEY)
 Fan = input('사용자 이름을 입력해주세요: ')
 
-system_instruction = SYU_HS + NEW + SSK + BLUE
+system_instruction = SYU_HS + NEW + SSK + BLUE + RED + INJ
 model = genai.GenerativeModel(model_name="gemini-2.5-pro-exp-03-25", system_instruction=system_instruction)
 
 def to_markdown(text):
